@@ -79,6 +79,65 @@ class saladecinema {
 
 }
 
+class inicilizacao {
+    criarreserva(): saladecinema {
+      write("escolha uma cadeira entre 0 e 100 ");
+      let cade = input ();
+      write("digite o seu nome")
+      let energiamax = input();
+      write("digite cpf");
+      let higiene = input();
+    
+      let bichim = new Bichim (nome,energiamax,0,0,0);
+      return bichim
+      
+    }
+  
+  
+    help () {
+      write ("comandos: \n");
+      write ("iniciar: <nome> <energiamax> < higiene> <felicidade> <alegria> : cria um novo bichim")
+      write ("mostrar: mostra o estado do seu bichim ")
+      write ("brinca: faz o bichim brincar")
+      write ("come: faz o bichim comer")
+      write ("banho: faz o bichim se limpar")
+      write ("sair: sai do jogo")
+  
+    }
+    
+    menu () {
+  
+      let bichim = this.criarbichim ();
+      while(true) {
+        let linha = input();
+        let palavras =  linha.split(" "); 
+        if(palavras[0] == "sair") {
+          break;
+        } else if (palavras[0] == "mostrar"){
+          write (" ESTE É O SEU BICHIM ｡◕‿◕｡ " + bichim + "\n");
+        } else if (palavras[0] == "iniciar"){
+          bichim = new Bichim(palavras[1],+palavras[2],+palavras[3],+palavras[4],+palavras[5]);
+        } else if (palavras[0] == "brinca"){
+          write(" bichindo banhando <3 " + bichim.setBrincar)
+        } else if (palavras[0] == "come"){
+          write(" bichinho comendo <3 " + bichim.setComer)
+        } else if (palavras[0] == "banho"){
+          write(" bichinho banhando <3 " + bichim.Banho)
+        }else {
+          console.log("comando inválido, digite novamente! ")
+        }
+  
+    }
+  
+    
+  
+  
+  }}
+  
+  let iniciar = new inicilizacao();
+  iniciar.menu();
+
+
 /// CASOS
 
 /// criando nova sala 

@@ -111,7 +111,7 @@ class Bichim {
     } write("Seu bicho ta sujooo ◑▂◐ ")
   }
   
-  public setBanho(): void {
+  public Banho(): void {
         if(!this.vivooumorto) {
             console.log(" SEU BICHO MORREU NÃO PRECISA DE BANNHO ~~((-_-))~~_ \n")
             return;
@@ -122,7 +122,7 @@ class Bichim {
         write ("bichinho banhadooo (◡‿◡✿) ")
   }
 
-  public setComer(): void {
+  public Comer(): void {
         if(!this.vivooumorto) {
             console.log(" SEU BICHO MORREU NÃO PRECISA COMER ~~((-_-))~~_ \n")
             return;
@@ -132,7 +132,7 @@ class Bichim {
         write("bichinho alimentado ｡◕‿◕｡ ")
   }
 
-  public setBrincar(): void {
+  public Brincar(): void {
     if(!this.vivooumorto) {
         console.log(" SEU BICHO MORREU NÃO PODE BRINCAR ~~((-_-))~~_  \n")
         return;
@@ -184,11 +184,14 @@ class inicilizacao {
       } else if (palavras[0] == "iniciar"){
         bichim = new Bichim(palavras[1],+palavras[2],+palavras[3],+palavras[4],+palavras[5]);
       } else if (palavras[0] == "brinca"){
-        write(" bichindo banhando <3 " + bichim.setBrincar)
+        write(" bichindo banhando <3 " )
+        bichim.Brincar
       } else if (palavras[0] == "come"){
-        write(" bichinho comendo <3 " + bichim.setComer)
+        write(" bichinho comendo <3 " )
+        bichim.Comer
       } else if (palavras[0] == "banho"){
-        write(" bichinho banhando <3 " + bichim.Banho)
+        write(" bichinho banhando <3 ")
+        bichim.Banho
       }else {
         console.log("comando inválido, digite novamente! ")
       }
